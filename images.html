@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+<body>
+    <!-- You can get free stock images from unsplash.com, pexels.com, pixabay.com, gratisography.com
+      and free svgs from undraw.co and ionicons. -->
+    <img src="images/EA (20).png" alt="EA properties logo" height="350px">
+    <img src="images/EA (19).png" alt="EA properties purple logo" height="350px">
+
+    <!-- Most images today are known as "bitmap" images or "raster" images, which are a 
+     grid of pixels, with each pixel assigned a colour value. The quality and clarity of
+     bitmap images are directly tied to the pixel dimensions(they are resolution dependent).
+     So enlarging bitmap images beyond their original size can lead to a loss of sharpness
+     and detail(which can be called, pixelation). Typical file formats for bitmaps are: jpg
+     and png. Vector images, on the other hand, are made by mathematical equations and
+     instructions for rendering shapes, paths and colours. They are resolution independent.
+     Vector images are usually used for logos and icons. Typical file formats for vector
+     images are: svg, AI(Adobe Illustrator). Think of it like, the vector image is made
+     inside the html, while the bitmap image is made outside the html -->
+     <!-- Below is the 'inline' way of displaying svgs -->
+    <p>Facebook Logo</p>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z" fill-rule="evenodd"/></svg> -->
+    
+    <!-- Below is a way of displaying svgs using images -->
+    <img src="svg/logo-facebook.svg" alt="Facebook logo svg" width="500px">
+
+    <!-- Ideally, we would use the image method of displaying svgs because of
+     'separation of concerns'(separation of concerns is a design principle in
+     which programs are organized into distinct sections, each addressing a 
+     specific aspect of functionality). Simply put, we would want to separate
+     our svgs from our structural html -->
+
+    <a href="index.html"><img src="svg/logo-facebook.svg" alt="Facebook logo svg" width="500px"></a>
+
+</body>
+</html>

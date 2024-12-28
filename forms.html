@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms page</h1>
+    <!-- The 'action' attribute in the form tag specifies the location on the server where
+     the data will be sent for processing. The 'method' attribute determines the http method
+     used for handling the form data. The are three main html elements that allow users to 
+     enter or select data in a form. They are: inputs(textual, binary, file inputs ets), 
+     textareas and dropdowns. For more information on html, css or javascript, you should 
+     check mdn docs; it's like an encyclopedia for html, css, javascript, and other web
+     technologies. -->
+
+     <!-- The input tag has a 'type' attribute that specifies the type of input. It also has
+      a 'name' attribute that assigns identifiers for data collection(it is required when
+      sending data to a server). There are also some other attributes for the input tag, like:
+      placeholder, required etc. -->
+      <form action="/api/v3/items" method="post">
+        <!-- form input -->
+        <label for="main-title">Title</label>
+        <input id="main-title" type="text" name="title" placeholder="Enter a title">
+        <br>
+
+        <!-- form textarea -->
+        <label for="main-entry">Entry</label>
+        <textarea name="entry" id="main-entry" rows="15" cols="20"></textarea>
+        <br>
+
+        <!-- form dropdown -->
+         <label for="country-entry">Country</label>
+         <select name="country" id="country-entry">
+            <option value="armenia">Armenia</option>
+            <option value="afghanistan">Afghanistan</option>
+            <option value="belgium">Belgium</option>
+         </select>
+         <br>
+
+         <!-- form checkboxes -->
+         <!-- The label often appears after the input for checkboxes, to ensure the text comes
+          after the checkbox. For checkboxes, the 'name' has to be different, since multiple 
+          checkboxes can be submitted at once. On the backend, the submitted values are represented
+          as 'on' -->
+         <input type="checkbox" id="team-1" name="chelsea">
+         <label for="team-1">Chelsea</label>
+
+         <input type="checkbox" id="team-2" name="man city">
+         <label for="team-1">Man City</label>
+
+         <input type="checkbox" id="team-3" name="man utd">
+         <label for="team-1">Man U</label>
+
+         <br>
+
+         <!-- form radiobuttons -->
+          <!-- The radiobuttons have the same 'name' values, but they possess a 'value' attribute
+           which represents the backend value for each radiobutton. Only one radiobutton can be 
+           submitted  -->
+
+         <input type="radio" id="medium" name="size" value="m">
+         <label for="medium">Medium</label>
+
+         <input type="radio" id="large" name="size" value="l">
+         <label for="large">Large</label>
+
+         <input type="radio" id="extra-large" name="size" value="el">
+         <label for="extra-large">Extra Large</label>
+
+         <!-- form button -->
+          <!-- The button doesn't have to be below all the elements, it just has to be anywhere inside
+           the form, when used in a form -->
+          <button>Submit</button>
+           <!-- <button type="reset">Reset values</button> -->
+
+      </form>
+</body>
+</html>

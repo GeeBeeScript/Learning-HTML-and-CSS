@@ -1,0 +1,1564 @@
+/*
+ The format for css is: 
+selector {property: value}.
+
+Everything starting from the opening curly brace to
+the closing curly brace is called a declaration.
+
+id styles take higher precedence over class styles.
+
+The universal selector "* {}", applies styling to every
+element on the page. It has the least amount of specificity(or
+precedence). Doing that may also be called a css 'reset'. This 
+applies default browser styles
+You can get colour combiinations from 'coolors.co'
+
+*/
+
+/* h1 {
+    color: red;
+    font-size: 100px;
+} */
+
+/* h2 {
+  color: gold;
+  font-size: 50px;
+}
+
+#heading {
+  color: hwb(300 0% 54%);
+}
+
+
+.heading {
+  color: orange;
+} */
+
+/* CSS Units
+pixels: absolute value, in summary, it is one dot on a screen
+font size: font size is the size of the font
+width: width of an element
+height: height of an element
+
+Percent units are relative units/values; they depend on the parent element
+'em': is relative, depends on parent. 1em == 16px (default browser style).
+The parent element may be the browser or a parent div, if the font size of 
+the parent div is specified.
+'rem': is relative, depends on root.
+
+Viewport units:
+vh - height- percent of the screen, not relative percentage discussed earlier.
+It is relative to the screen
+vw - width- percent of the screen, not relative percentage discussed earlier.
+It is relative to the screen
+*/
+
+/* html {
+    font-size: 20px;
+}
+
+section {
+    font-size: 10px;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.display {
+  background-color: gainsboro;
+  height: 100vh;
+  width: 100vw;
+} */
+
+/* 
+CALC()  is used to perform math operations. When using calc(), you can
+mix and match values(units).
+
+min-height sets the minimum height for the container(or element). The 
+container by default, will always be this minimum height. If the
+container has elements that would make the container expand more than this
+minimum height, the container would expand accordingly, it's contents 
+will not overflow.
+
+max-height sets the maximum height of the container(element). This value sets
+the maximum height for which the container should not exceed. If the contents 
+of the container exceed the max-height value, the container overflows. After
+that, an overflow property is to be set. 
+
+*/
+
+/* 
+
+* {
+  margin: 0;
+}
+
+.navbar {
+  background: blue;
+  height: 100px;
+  color: white;
+  font-size: 3rem;
+}
+
+.banner {
+  background-color: green;
+  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
+  max-height: 90vh;
+  overflow: scroll;
+  font-size: 2rem;
+}
+
+.example {
+  background-color: pink;
+  width: 20rem;
+  height: 25rem;
+  overflow: hidden;
+  overflow: scroll;
+  font-style: normal;
+}
+
+
+*/
+
+/* 
+text align aligns the content to either left, right or center.
+text indent gives indentation to the first line of the container.
+The indentation is specified by a value you set e.g: 50px, 7rem etc.
+*/
+
+/* body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: right;
+  
+}
+
+.main-heading {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+.sub-heading {
+}
+
+.one {
+  text-indent: 50px;
+}
+
+.two {
+  text-align: left;
+} */
+
+/* 
+line height is the height of each line. If a font-size value is specified,
+in conjuction with line height, the line height = font-size * line height
+*/
+
+/* body {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 40px;
+  text-decoration: line-through;
+  text-transform: capitalize;
+
+}
+
+.one {
+  letter-spacing: 2rem;
+}
+
+.two {
+  word-spacing: 2rem;
+}
+
+.three {
+  text-transform: capitalize;
+}
+
+a {
+  font-size: 2rem;
+  text-decoration: line-through;
+} */
+
+/* 
+CSS Box Model
+'outline' just represents the outline of the border. 'outline offset' property
+allows you to move the outline away from the border by a certain amount. It's like
+the outline giving the border padding. 
+*/
+
+/* * {
+  margin: 0;
+} */
+
+/* body {
+  border: 2px solid sandybrown;
+  border: 1rem dashed palevioletred;
+}
+
+h1, p, a {
+  border: 2px solid salmon;
+  outline: 2px solid green;
+  padding-top: 20px;
+  padding-right: 35px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding: 20px; 
+  padding: 20px 35px 15px 10px;
+  padding: 20px 15px;
+  margin: 10px 15px 20px 25px;
+  border-bottom: 2px solid aquamarine;
+  border-radius: 50%;
+  border-radius: 5px;
+} */
+
+/* .links {
+  margin: 3rem;
+}
+
+a {
+  background-color: green;
+  padding: 1.5rem 1.25rem;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.one {
+  outline-width: 0.2rem;
+  outline-style: solid;
+  outline-color: black;
+  outline-offset: 10px;
+  outline: 0.2rem solid black;
+  outline-offset: 10px;
+}
+
+.two {
+  border: 0.2rem solid #222;
+} */
+
+/* 
+CSS Display Property
+Block-level elements take up the full width of the screen, and always
+start on a new line
+Inline elements take only the width of their content, and do not start
+on a new line
+You can change these default attributes using the 'display' property
+The 'box-sizing' property ensures that padding applied to the content
+of an element does not increase the size of the element. Instead, the
+content becomes smaller or rearranges, and the size of the element's box
+remains the same. The default 'box-sizing' value, applied to all elements
+is 'content box'.
+
+For 'inline-block', the elements do not start on the new line, but the 
+browser respects margin, width, height
+
+'display: none' removes(hides) the object and its space completely, but the object
+remains on the DOM
+Opacity just changes the color values from fully visible to invisible
+'visibility: hidden' removes(hides) the object, but leaves its space
+*/
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.block {
+  background: yellow;
+  width: 300px;
+}
+
+.inline {
+  background: teal;
+  display: block;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  color: red;
+  text-decoration: none;
+  letter-spacing: 2px;
+  background: #222;
+  padding: 5px;
+  display: block;
+  display: inline-block;
+  display: none;
+  opacity: 1;
+  opacity: 0.5;
+  opacity: 0;
+  visibility: hidden;
+}
+ */
+
+/* 
+Background images
+The default 'background-position' is 0 0.
+You can get colour gradients by checking css gradient generator online.
+You can combine all background attributes into the 'background' declaration
+*/
+/* 
+div {
+  height: 300px;
+  color: white;
+  border: 2px solid red;
+}
+
+.big-img {
+  background: url(../images/skateboard.jpg);
+  background-repeat: round;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.small-img {
+  background: url(../images/EA\ \(19\).png);
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: space;
+  background-repeat: round;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: left;
+  background-position: bottom;
+  background-position: right;
+  background-position: top;
+  background-position: 20% 50%;
+  background-position: 100% 100%;
+}
+
+.medium-img {
+  background: url(../images/milkshake.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  color: white;
+  border: 2px solid red;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-img {
+  background: url(../images/skateboard.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.small-img {
+  background: url(../images/EA\ \(19\).png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.medium-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/milkshake.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: centre;
+  background-attachment: fixed;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/milkshake.jpg) center/cover no-repeat fixed;
+} */
+
+/* CSS Position Properties
+'position: static' is the default, elements are positioned according to 
+the normal flow.
+'position: relative' positions the element relative to its normal position
+(ie top, bottom, left and right)
+'position: absolute' positions the element relative to a parent element with
+'position: relative'. If there is no element with attribute of 'position: relative',
+it positions the element relative to the body.
+'position: fixed' positions the element relative to the viewport - screen being viewed
+(not body). The elements stays in place while we are scrolling. 'position: fixed' will
+use other content to fill out its original space.
+'position: sticky' toggles between relative and fixed. Once a position is met in the
+viewport, the position becomes fixed.
+*/
+
+/* .banner {
+  border: 2px solid green;
+  padding: 10px;
+}
+
+.one {
+  float: left;
+}
+
+.two {
+  float: right;
+  height: 40px;
+}
+
+p {
+  clear: both;
+} */
+
+/* Position property */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  height: 200px;
+  width: 50%;
+  float: right;
+}
+
+.one {
+  background: red;
+}
+
+.two {
+  background: green;
+}
+
+.three {
+  background: yellow;
+}
+
+.four {
+  background: orange;
+}
+
+h1 {
+  clear: both;
+} */
+
+/* div {
+  border: 2px solid brown;
+  background: azure;
+  margin-top: 40px;
+}
+
+.one {
+  background: palegoldenrod;
+  position: relative;
+  top: 200px;
+  bottom: 2rem;
+  left: 20%;
+  right: 40px;
+}
+
+.two {
+  background: palegreen;
+}
+
+.special {
+  background: yellow;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  background: peru;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  position: fixed;
+  position: sticky;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.space {
+  width: 100%;
+  height: 300vh;
+} */
+
+/* Media  Queries and responsive design. Ideally, you should start with
+designing for mobile first, and then design outwards to the biggest screen 
+size(what they said). It's easier to start with mobile first, and then expand
+to desktop, than the other way round.
+'min-width' here may be interpreted to be, "starting from"
+'max-width' here may be interpreted to be, "up to" or "before"
+If there are syntax errors in the media query declaration, the media queries
+might not apply.
+z-index does not work on 'position: static'. It only works on positions
+relative, absolute etc. 
+ */
+
+/* body {
+  background: grey;
+}
+
+.container {
+  background: green;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.banner {
+  margin: 20px;
+  width: 80vw;
+  height: 70vh;
+  border: 5px solid limegreen;
+  position: relative;
+}
+
+.banner img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+
+.one {
+  background: red;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.two {
+  background: green;
+  top: 10%;
+  left: 10%;
+  z-index: 2;
+}
+
+.three {
+  background: blue;
+  top: 20%;
+  left: 20%;
+  z-index: 1;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    background: blue;
+  }
+
+  .container {
+    background: red;
+  }
+
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: purple;
+  }
+
+  .container {
+    background: orange;
+  }
+} */
+
+/* Pseudo elements
+::before, ::after pseudo-elements create elements and insert before, after
+the content
+"content: '' " at least 
+"img" is a content itself. Pseudo elements do not apply to images
+*/
+
+/* p::before {
+  content: "This is a pseudo-element";
+  display: block;
+  background: #222;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: green;
+}
+
+p::after {
+  content: "";
+  width: 100%;
+  height: 3rem;
+  display: block;
+  background: #222;
+  font-weight: bold;
+  font-size: 2rem;
+  color: red;
+}
+ */
+
+/* More CSS Selectors */
+/* Descendant and child selectors */
+/* x > y; where x and y are selectors, signifies that y is a direct child of x */
+/* ::first-line and ::first-letter are used to apply styling to the first
+line and first letter only */
+/* ':root' selects the root element of the document. It has a higher specificity. 
+Usually used for general styles and css variables */
+
+/* .con h1 {
+  color: mediumseagreen;
+} */
+
+/* Class selectors are superior to general selectors */
+
+/* .con > h1 {
+  color: mediumturquoise;
+}
+
+div h1 {
+  color: blue;
+}
+
+div > h1 {
+  color: blueviolet;
+}
+
+p::first-line {
+  font-weight: bold;
+  color: orange;
+}
+
+p::first-letter {
+  font-size: 150%;
+}
+
+p:hover {
+  font-size: 1.5rem;
+  color: palevioletred;
+  letter-spacing: 2px;
+}
+
+a:link {
+  font-size: 1rem;
+  color: gold;
+}
+
+a:visited {
+  font-size: 2rem;
+  color: pink;
+  text-decoration: none;
+}
+
+a:active {
+  color: green
+}
+
+:root {
+  font-size: 17px;
+  font-weight: bold;
+} */
+
+/* CSS Transform, transition and animation
+Transform: translate() scale() rotate() skew()
+The percentage width used in the translate property uses the 
+width of its parent element
+The 'scale()' property increases or decreases the width and height of 
+the element by its original width and height. For example, a value of
+2 (scale(2)), makes the element twice its original width and height.
+You can pass 2 arguments into the "scale(x, y)" function, where x 
+represents the x-direction scale, and y represents the y-direction scale.
+You can also pass in one argument to represent the same values for both
+x and y-directions.
+Adding one argument for 'skew()', would make that value
+apply only to the x-axis.
+
+Transition
+transition: a change over time
+transition-property defines the properties you want to apply a transition to.
+transition-duration determines the time the transition will apply for.
+For example: 
+transition-property: background, border-radius;
+transition-duration: 4s, 2s;
+In this example, the background property will have a transiton-duration of
+4s, and the border-radius will have a transition-duration of 2s.
+transition-delay delays the time before the transition starts. 
+A 'transition' shorthand can also be used that combines the transition 
+properties. The 'all' in the 'transition' property simply instructs the
+transition to apply to all the changing properties (it applies the same 
+transition properties to all the changing values).  
+The shorthand 'transition' values will be:
+transition: transition-property, transition-duration, transition-timing-function
+transition-delay
+
+'transition-timing-function' defines how the transition will take place. It is
+set to 'ease' by default. We have other values available like: linear, ease-in,
+ease-out, ease-in-out. 
+ease: slow start, fast, slow-end
+linear: same speed start to end
+ease-in: slow start
+ease-out: slow end
+ease-in-out: slow start, fast, slow end
+
+The difference between transition and animation is that, transition allows you
+to make change from start state to the end state, while, animation allows you
+to have multiple states between
+ */
+
+/* div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.one {
+  background: red;
+  transform: translateX(-30px);
+  transform: translateX(50%);
+  transform: scaleX(2);
+  transform: rotate(10deg);
+  transform: skewY(25deg);
+  transform: skew(30deg, 45deg);
+}
+
+.two {
+  background: green;
+  transform: translateY(40px);
+  transform: rotate(75deg);
+}
+
+.three {
+  background: blue;
+  transform: translate(150px, 200px);
+  transform: scale(1.3, 1.7);
+  transform: rotateZ(20deg);
+  transform: rotateX(90deg);
+  transform: rotateY(40deg);
+  transition-property: background, border-radius;
+  transition-duration: 4s, 2s;
+  transition-delay: 2s;
+  transition: background 2s 1s, transform 3s 2s, border-radius 3s 2s;
+  transition: all 2s 1s;
+}
+
+div:hover {
+  background: coral;
+}
+
+.three:hover {
+  border-radius: 50%;
+}
+
+.three:hover {
+  background: coral;
+  border-radius: 50%;
+  transform: skew(20deg, 30deg);
+} */
+
+/* * {
+  margin: 0.5rem;
+  padding: 0;
+}
+ */
+
+/* div {
+  width: 100px;
+  height: 100px;
+  background: peru;
+  color: white;
+  font-size: 1.5rem;  
+  margin: 2px;
+  transition: all 2s;
+}
+
+div:hover {
+  transform: translate(20px, 0);
+  transform: translateX(100px);
+}
+
+.ease {
+  transition-timing-function: ease;
+}
+
+.linear {
+  transition-timing-function: linear;
+}
+
+.ease-in {
+  transition-timing-function: ease-in;
+}
+
+.ease-out {
+  transition-timing-function: ease-out;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+ */
+
+/* animations(different source) */
+/* animations provide keyframes for more control over the animation, and 
+allows us to create complex animations on a frame-by-frame basis. 
+Some animation properties include: animation-name, animation-duration,
+animation-timing-function, animation-delay, animation-iteration-count,
+animation-direction, animation-fill-mode
+
+animation-name: used to select the keyframe you want to use to animate the
+element.
+animation-duration: this sets the time taken for the animation to complete
+one animation instruction(from 0 - 100%). It is 0s by default(it won't run).
+animation-timing-function: this defines the acceleration curve for the
+animation. The default is 'ease', but it has the same values as that of
+the transition-timing-function. 
+animation-delay: this sets a delay before running the animation. The default 
+is 0s(animation will run instantly).
+animation-iteration-count: defines how many times you want the animation to
+repeat, before it stops animating. Default is 1. You can change to another
+numeric value, or set to 'infinite'.
+animation-direction: defines whether the animation will run normally, or in 
+reverse. 'reverse' will make it start from the last keyframe, and end on the
+first keyframe. 
+animation-fill-mode: defines the properties at the beginning and end of 
+animation. Can have value like: 'forwards', 'backwards', 'both'.
+
+You can use a shorthand for the animation property: 
+animation: name duration timing-function delay iteration-count direction fill-mode;
+
+
+*/
+
+/* body {
+  width: 100%;
+  height :100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes slideInLeft {
+  from {
+    transform: translate(-70px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
+} */
+
+/* .first-heading {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+
+  transform: translateX(-150px);
+  animation: slideInLeft 1s ease-in 0s 1 normal both;
+  animation: slideInLeft 1s ease-in;
+} */
+
+/* This makes the animation more reusable */
+
+/* .slideInLeft {
+  animation: slideInLeft 1s ease-in;
+} */
+
+/* utility classes */
+/* .animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate--infinite {
+  animation-iteration-count: infinite;
+}
+
+.animate--delay-1s {
+  animation-delay: 1s;
+}
+
+.animate--fast {
+  animation-duration: 0.6s;
+}
+
+.animate--slow {
+  animation-duration: 3s;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-timing-function: ease-in;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(300px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+  animation-timing-function: ease-in;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-timing-function: ease-in;
+
+  transform-origin: top left;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+.bounce {
+  animation-name: bounce;
+}
+ */
+
+/* CSS variables(aka custom properties) allow us to store values in one place
+and reuse them in multiple places in our files. We can use variables for colours,
+font-size, transition etc. 
+Syntax for naming variables is: 
+--varName:value
+To reuse CSS variables: 
+property:var(--varName);
+There are two scopes: 
+:root{} = global scope
+element = local scope
+ */
+
+/* :root {
+  --primaryColor: green;
+  --cl-secondary: yellow;
+  --mainTransition: all 2s linear;
+  --mainSpacing: 5px;
+}
+
+h1 {
+  color: var(--primaryColor);
+}
+
+h2 {
+  color: var(--primaryColor);
+}
+
+h3 {
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+
+p {
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+}
+
+h3:hover {
+  color: var(--cl-secondary);
+}
+
+p:hover {
+  color: var(--cl-secondary);
+}
+
+div {
+  --primaryPurple: purple;
+}
+
+.main-text {
+  color: var(--primaryPurple)
+} */
+
+/* This (h3) will not work because '--primaryPurple' is a variable under
+the 'div'(local scope), so only elements directly under the div will work */
+
+/* h3 {
+  color: var(--primaryPurple);
+} */
+
+/* Text shadow  and Box shadow
+Text shadow
+The syntax is: 
+text-shadow: x-direction, y-direction, blur, color;
+You can search for a text shadow generator online to get a desired result
+
+Box shadow
+The syntax is:
+box-shadow: x-direction, y-direction, blur, color;
+You can also search for a box shadow generator online to get a desired result
+*/
+
+/* h1 {
+  text-shadow: 5px 5px 5px blue;
+}
+
+.box {
+  width: 210px;
+  height: 210px;
+  background: red;
+  box-shadow: 5px 5px 5px yellow;
+  transition: all 1s ease-in-out;
+}
+
+.box:hover {
+  box-shadow: 10px 10px 10px blueviolet;
+} */
+
+/* Object fit is primarily used when you want to fit two images of different 
+height and width to fit the same dimension(width and height). 
+object-fit: cover, contain, fill, none, scale-down
+*/
+
+/* img {
+  width: 100%;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+}
+
+.one {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+}
+
+.two {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+}
+
+ */
+
+/* Flexbox tutorial */
+/* 'flex' is a block level element 
+Flexbox properties can be divided into two categories. The first are those
+that affect all elements of a container. The second is those that affect 
+individual elements of a container. An example of the first category is
+flex direction
+
+flex-direction: row(default) row-reverse column column-reverse
+flex-wrap: is used when your flex-items overflow the container(when your
+flex-container cannot contain all your flex-items due to its size - especially
+on smaller screen sizes). flex-wrap sets the items to continue its display,
+within the container, on the next line. 
+
+justify content is used to align items horizontally. Value options are: 
+flex-start(default), flex-end(anchors items to opposite end of flex-start),
+center, space-between, space-around, space evenly.
+
+align items is used to align items vertically. Value options are: 
+stretch(default), flex-start, flex-end, center, baseline. 
+'align-items' aligns items relative to the edge of the container's box
+*/
+
+/* .container {
+  border: 5px solid blue;
+  display: flex;
+  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  height: 50vh;
+  align-items: stretch;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+  align-items: baseline;
+}
+
+.box {
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #f3f3f3;
+}
+
+.box-1 {
+  background: peru;
+}
+
+.box-2 {
+  background: palegoldenrod;
+}
+
+.box-3 {
+  background: palegreen;
+}
+
+.box-4 {
+  background: paleturquoise;
+}
+
+.box-5 {
+  background: palevioletred;
+}
+
+.random {
+  background: green;
+} */
+
+/* * {
+  margin: 0;
+}
+
+.hero {
+  height: 100vh;
+  background: url('../images/skateboard.jpg');
+  font-size: 2rem;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 5px 5px 5px #333;
+}
+
+h1 {
+  text-transform: uppercase;
+} */
+
+/* align-content: stretch(default|), flex-end, flex-start, space-around, 
+space-between, center */
+
+/* .container {
+  border: 5px solid blue;
+  height: 300px;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  align-content: flex-end;
+  align-content: flex-start;
+  align-content: space-around;
+  align-content: space-between;
+  align-content: center;
+} */
+
+/* .box {
+  width: 30px;
+  height: 10px;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #f3f3f3;
+} */
+
+/* .box-1 {
+  background: peru;
+}
+
+.box-2 {
+  background: palegoldenrod;
+}
+
+.box-3 {
+  background: palegreen;
+}
+
+.box-4 {
+  background: paleturquoise;
+}
+
+.box-5 {
+  background: palevioletred;
+}
+
+.random {
+  background: green;
+} */
+
+/* order
+all flex children have an order of 0 by default. Setting a flex item to have
+an order of one, when other flex items have an order of 0, makes the flex 
+item with an order of one, to appear last. Setting to -1, makes it appear
+first
+*/
+
+/* .box-1 {
+  order: 4;
+}
+
+.box-2 {
+  order: 3;
+}
+
+.box-3 {
+  order: 2;
+}
+
+.box-4 {
+  order: 1;
+}
+
+.box-5 {
+  order: 0;
+}
+
+
+.random {
+  order: -1;
+} */
+
+/* 'align-self' is used to align individual elements. 'align-self' has the
+same value options as 'align-items'. */
+
+/* .container {
+  display: flex;
+  height: 600px;
+  align-items: center;
+  border: 5px solid blue;
+} */
+
+/* .box {
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #f3f3f3;
+}
+
+.box-5 {
+  align-self: flex-end;
+  align-self: flex-start;
+  align-self: stretch;
+  align-self: center;
+  align-self: baseline;
+}
+
+.box-3 {
+  align-self: stretch;
+}
+
+.box-2 {
+  align-self: flex-end;
+} */
+
+/* flex-grow makes all items grow as the div grows, to fill out the size of
+the container. Flex children have a default flex-grow of 0. flex-grow of '1'
+makes it grow. 
+*/
+
+/* .container {
+  border: 5px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #f3f3f3;
+  flex-grow: 1;
+} */
+
+/* flex shrink: all elements have a default flex-shrink of 1. This means
+that flex items shrink by default, when displayed on a small screen size.  */
+
+/* .box-2 {
+  width: 200px;
+  flex-shrink: 0;
+} */
+
+/* flex basis
+flex-grow, flex-shrink and flex-basis can be placed on a single line: 
+flex: flex-grow flex-shirnk flex-basis;
+*flex-basis sets a minimum width of flex items(i.e if the width of the flex
+items becomes less than the flex-basis value - due to the screen size - the
+flex items will be displayed on a new line. 
+*/
+
+/* .container {
+  border: 5px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #f3f3f3;
+  flex-grow: 1;
+  flex: 1 0 50px;
+} */
+
+/* flex gap is a new flexbox feature that allows you to set the value of
+the gaps between flex items. */
+
+/* CSS Grid
+'grid-template-columns' allows you to set the amount of grid columns, and 
+size of those grid columns. The method of structuring using 'grid-template-
+columns' is known as implicit grid. 
+
+setting a unit of 'auto' in css grid, makes the size of the element change
+according to the changing screen size. 
+
+for 'grid-template-rows', if the value of the last or, some of the elements
+are not set, the values are by default set to 'auto'. 
+
+fr units stands for 'fraction of available space'. E.g, setting  '1fr 1fr'
+means you are setting to two fractions of the available space, which is 
+essentially, '50% 50%(of the total width)'. fr is much better than using
+width because, width uses the value set(e.g 50%), but 'gap' as well as other
+elements could make the elements overflow from the container. fr units use
+the available space, thus taking into consideration the 'gap' as well as
+other elements.  
+
+grid gap(grid-row-gap, grid-column-gap) is obsolete. 
+gap is used to provide column and row gaps in grid. 'colum-gap' is used to
+provide gaps between grid columns. 'row-gap' is used to provide gaps between
+rows. 'gap' is a shorthand used to provide gaps between rows and columns. 
+The syntax for 'gap' is : 
+'gap: row-gap, column-gap;' or,
+'gap: value', the single value is applied to both rows and columns. 
+
+You can use 'grid-column-start', 'grid-column-end', 'grid-row-start' and
+'grid-row-end' for each grid item to specifically detail where each grid 
+item should start and end. Both grid columns and grid rows have a shortcut
+of this syntax: 
+'grid-column: grid-column-start/grid-column-end;'
+'grid-row: grid-row-start/grid-row-end;'
+A grid column or row item of -1, is the last position on the grid column or
+grid row. 
+
+You can name grid lines using the '[start]' and '[end]' syntax, by using them
+in the 'grid-template-column' and 'grid-template-row' definition. Check below
+for more info. 
+
+'grid-template-areas' is an efficient method for positioning items in a grid
+display.  
+
+The 'order' property sets the order (position relative to other grid items)
+of each grid item. All grid items have a default order of 0. Setting an order
+to '1' places it last (since others are not > 1). Setting an order to '-1'
+places it first(since others are not < -1 ).
+
+You can use the 'repeat' property function for grid-template-row and columns,
+rather than constantly repeating values during grid-template-row and column
+declaration.  
+
+'justify-content' by default in css grid is set to 'flex-start'. 
+
+'align-content' by default is set to 'stretch'(since grid items stretch the 
+full height of the container by defualt). 'align-content' depends on the 
+excess space between the container and the grid items of the container(*it goes 
+without saying though). 
+
+'align-items justify-items' are used to align content within grid items. These
+propeties position grid items horizontally and vertically within grid cells.
+
+'justify-self align-self' are used to align each grid cell element within each 
+grid cell (not the grid cell items, but each grid cell element itself within 
+each grid cell). 
+
+'minmax()' function is used when you don't want grid items to resize with
+changing screen size. You can set 'minmax(minimum value, maximum value)'
+function to grid cells, which will determine the minimum value that 
+particular grid cell will occupy regardless of the screen size. The maximum
+value will set the maximum value that the particular grid cell will expand to 
+with changing screen size. It can be used as an alternative to media queries.
+
+'auto-fill' keeps creating items. 'auto-fit' only fits items. 
+'auto-fill' is used added to grid-template definition when you want to 
+fill grid items and reduce grid items(of specific dimension) with changing#
+container size. It is used in responsive design, and as an alternative to 
+media queries. Essentially, it dynamically creates and reduces extra columns
+with changing screen size. 
+
+'auto-fit' on the other hand, fits items to grid container with changing 
+container sise. 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.container {
+  border: 5px solid green;
+  display: grid;
+  min-height: 100vh;
+  /* grid-template-columns: 100px;
+  grid-template-columns: 100px 100px;
+  grid-template-columns: 120px 150px auto;
+  grid-template-columns: 120px 7rem auto;
+  grid-template-rows: auto 10rem auto;
+  grid-template-rows: 100px 150px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: [start] 1fr [col-line-1] 1fr [col-line-2] 1fr [end];
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto 5rem;
+  grid-template-rows: 1fr 5rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: [start] 1fr [row-line-1] 1fr [row-line-2] 1fr [end];
+  row-gap: 10px;
+  column-gap: 7px;
+  gap: 50px;
+  grid-template-areas: 
+  "a a b"
+  "a a b"
+  "c c b"
+  "d d d"
+  "e f f"; */
+  /* grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px); */
+  /* justify-content: center;
+  justify-content: space-evenly;
+  justify-content: space-around;
+  justify-content: space-between; */
+  /* align-content: stretch;
+  align-content: flex-start;
+  align-content: center;
+  align-content: space-around;
+  align-content: flex-end;
+  align-content: space-between;
+  align-content: space-evenly; */
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  align-items: flex-end;
+  align-items: flex-start;
+  justify-items: flex-start; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 1fr minmax(300px, 1fr) 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cell {
+  padding: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  border: 3px solid red;
+  background: silver;
+  color: #fff;
+}
+
+.cell-1 {
+  background: powderblue;
+  /* grid-column-start: 1;
+  grid-column-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 1/3;
+  grid-column: start/end;
+  grid-row: 1/3;
+  grid-row: start/end;
+  grid-area: a; */
+  /* order: 2; */
+  /* justify-self: end;
+  align-self: center; */
+}
+
+.cell-2 {
+  background: tan;
+  /* grid-area: b; */
+  /* order: 1; */
+}
+
+.cell-3 {
+  background: tomato;
+  /* grid-area: c; */
+  /* order: -1; */
+}
+
+.cell-4 {
+  background: yellowgreen;
+  /* grid-column: 1/-1; */
+  /* grid-area: d; */
+}
+
+.cell-5 {
+  background: saddlebrown;
+  /* grid-area: e; */
+}
+
+.cell-6 {
+  /* grid-area: f; */
+  order: -2;
+}

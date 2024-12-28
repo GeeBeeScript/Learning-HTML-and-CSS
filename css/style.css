@@ -1,0 +1,131 @@
+/* 'body {}' applies styles to the body of the document, while '* {}' 
+applies styles to each individual element in the body. For example: 
+'* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}'
+is telling the body to apply those styles to each element of the body.
+These styles could be overwritten eventually if you wish to do so.
+Forms don't inherit font-size, and other typography settings made in
+the 'body {}'. So, you could gather elements in a form, and set
+'font: inherit;', to enable form elements to inherit font settings.
+
+box-sizing by default is set to content box, which means that an 
+increase in the width will result in an increase in the width of the
+element. In contrast, a value of border-box, means that an increase in 
+the width will result in an increase in the element's box width. 
+
+rem stands for "root ems"
+*/
+
+/* Columns */
+
+/* .columns {
+    column-count: 4;
+    column-width: 250px;
+    column-rule: 4px solid sienna;
+    column-gap: 3rem;
+} */
+
+/* The 'white-space: nowrap' property enables the content to always be
+together on the same line. 
+ */
+
+/* .nowrap {
+    white-space: nowrap;
+    background: brown;
+} */
+
+/* You can set a 'flex-flow' property that combines flex-wrap and 
+flex-direction. The syntax is: 
+flex-flow: flex-direction, flex-wrap; */
+
+/* You can use 'place-content' when using grid. The syntax is: 
+place-content: align-content justify-content;
+*/
+
+/*  */
+
+
+/* @media screen and (orientation: landscape) {
+    p {
+        width: 1000px;
+    }
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+}
+
+
+section {
+    width: 100%;
+    height: 50%;
+    font-size: 1.5rem;
+    background: darkslateblue;
+    text-align: center;
+    place-content: center;
+}
+
+nav {
+    height: 50%;
+    font-size: 1.5rem;
+    background: white;
+    border-bottom: 2px solid #333;
+    margin: 0;
+    color: #1b212a;
+    text-align: center;
+    place-content: center;
+}
+
+main {
+    margin: 0;
+    width: 100%;
+    height: 75%;
+    text-align: center;
+    place-content: center;
+    background: radial-gradient(white, #4d5d76);
+    color: #1b212a;
+    font-size: 1.5rem;
+}
+
+footer {
+    width: 100%;
+    height: 10%;
+    background-color: #475569;
+    font-size: 1.4rem;
+    text-align: center;
+    place-content: center;
+}
+
+@media screen and (min-width: 576px) {
+    main {
+        background: radial-gradient(white, green);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        background: radial-gradient(white, gold);
+    }
+} */

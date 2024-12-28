@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revisiting html</title>
+  </head>
+  <body>
+    <!--This is a comment in html-->
+
+    <!--This is a paragraph section-->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit rem
+      doloribus officiis iste qui nobis repudiandae ratione obcaecati delectus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae est hic
+      nam incidunt repellat necessitatibus corrupti voluptas sunt nihil dicta
+      doloribus repellendus, ratione, nostrum consequuntur molestias pariatur
+      magnam excepturi porro in consectetur eveniet cum laboriosam voluptatibus
+      numquam. Ducimus voluptas exercitationem quo alias iure? Dolor earum ipsam
+      asperiores quibusdam fuga enim!
+    </p>
+    <hr>
+
+    <!-- This is a list section -->
+    <h2>Premier League Table</h2>
+
+    <ol>
+      <li>Liverpool</li>
+      <li>Man City</li>
+      <li>Chelsea</li>
+    </ol>
+
+    <hr>
+
+    <h2>Champions League Winners</h2>
+
+    <ul>
+      <li>Chelsea</li>
+      <li>Real Madrid</li>
+      <li>Man City</li>
+    </ul>
+
+    <ol>
+      <li>
+        Real Madrid
+        <ul>
+          <li>Champions League</li>
+          <li>La Liga</li>
+          <li>Spanish Cup</li>
+        </ul>
+      </li>
+      <li>Barcelona</li>
+      <li>Atletico Madrid</li>
+    </ol>
+
+    <!--This is the hyperlink section-->
+
+    <a href="register.html">
+      <h1>Register</h1>
+    </a>
+
+    <br>
+
+    <!-- The 'href="register.html"' in the link below is an attribute, where 'href' is the attribute name
+     and 'register.html' is the attribute value -->
+    <ul>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="#id-test">Go to bottom unordered lists</a></li>
+    </ul>
+    <img src="images/EA (20).png" alt="EA properties logo" height="350px">
+
+    <!--Dummy Values-->
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nesciunt
+      atque deleniti ea excepturi facere facilis, reprehenderit alias. Error ab
+      accusantium vitae officiis, pariatur dolorem non rem sapiente amet nulla
+      quo rerum aspernatur consequuntur cupiditate enim placeat labore quia
+      nostrum! Quis, cum totam laudantium atque in tenetur maxime enim. Animi
+      neque repudiandae consequuntur eius nisi, reiciendis enim quas nobis qui
+      eaque explicabo minus quibusdam optio, quis tenetur culpa. Assumenda
+      eligendi voluptatibus vitae omnis, nam harum dolorum necessitatibus quas
+      velit, non laboriosam eius. Enim exercitationem doloremque deserunt nemo
+      impedit eaque possimus.
+    </p>
+
+    <ul id="id-test">
+      <li id="li-id-1">First Value</li>
+      <li id="li-id-2">Second Value</li>
+    </ul>
+
+    <img src="images/EA (19).png" alt="EA properties purple logo" height="350px">
+
+    <!-- Block elements start on a new line, and take up the full width of the page.
+     Inline elements do not start on a new line, and they only take up the width of 
+     their content. Examples of block elements: ul, li, h1, p etc. Examples of inline
+     elements: a, img, input etc. Wrapping a block element inside an inline element 
+     makes it invalid. A valid alternative would be to wrap an inline element inside
+     a block element. -->
+     <a href=""><h1>Values</h1></a>
+     <input type="text">
+
+     <!-- Semantic HTML is using HTML elements that describe the type of content they
+      contain. They include header, nav, main, article, section and footer tags. Semantic
+       means 'meaningful'. Semantic elements provide meaningful structure typically used
+       for significant sections, in contrast, the 'div' element is a generic container
+       typically used for smaller groups of content. The 'div' element is often used to 
+       group smaller sections of content, where using a semantic element wouldn't make
+       sense.  -->
+
+       <!-- Tables -->
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Match</th>
+            <th>Stadium</th>
+            <th>City</th>
+            <th>Scorer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2008</td>
+            <td>Man U vs Chelsea</td>
+            <td>San Siro</td>
+            <td>Milan</td>
+            <td rowspan="5">Cristiano Ronaldo</td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td>Real Madrid vs Atletico Madrid</td>
+            <td>Wanda Metropolitano</td>
+            <td>Madrid</td>
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td rowspan="2">Real Madrid vs Juventus</td>
+            <td>FC Porto Stadium</td>
+            <td>Porto</td>
+          <tr>
+            <td>2017</td>
+            <td>Cardiff Stadium</td>
+            <td>Cardiff</td>
+          </tr>
+          <tr>
+            <td>2018</td>
+            <td>Real Madrid vs Liverpool</td>
+            <td>Kyiv Stadium</td>
+            <td>Kyiv</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Total Champions League</td>
+            <td>5</td>
+          </tr>
+        </tfoot>
+      </table>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>Revisiting html</title>
+    </head>
+    <body>
+        <p>Welcome back</p>
+    </body>
+</html> -->
